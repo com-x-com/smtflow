@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Smtflow</title>
+	<meta name="description" content="WEB前端流程图设计工具">
+	<meta name="keywords" content="Smtflow 流程图 前端UI 流程图设计 活动流程设计 拖拽工具">
+	<link rel="shortcut icon" href="./themes/img/favicon.ico" />
+	<script src="./js/smtflow.min-1.0.1.js"></script> 
+	<script src="./demo.js"></script>
+	<script charset="UTF-8" id="LA_COLLECT" src="//sdk.51.la/js-sdk-pro.min.js"></script>
+	<script>LA.init({id: "JYngx2D0AVqStZkG",ck: "JYngx2D0AVqStZkG"})</script>
+	<link rel="stylesheet" href="./themes/flow.min.css">
+	<link rel="stylesheet" href="./themes/icons.css">
+	<style>
+		#dataDiv {
+			display: none;
+			width: 300px;
+			border: 5px solid #999;
+			position: fixed;
+			top: 150px;
+			left: 50%;
+			margin-left: -150px;
+			background-color: #d2e1f0;
+		}
+		#dataDiv > div {
+			padding: 10px;
+			cursor: pointer;
+		}
+		#dataDiv > div:hover {
+			background-color: #92C0D1;
+		}
+	</style>
+</head>
+<body>
+	<div id="flow" class="test" style="height: 600px;margin: 20px;">
+	</div>
+	<div style="margin: 20px;">		
+		<button type="button" id="btn0">不可编辑</button>
+		<button type="button" id="btn1">可编辑</button>
+		<button type="button" id="btn2">设置标题</button>
+		<button type="button" id="btn3">设置线类型-直线</button>
+		<button type="button" id="btn4">设置线类型-折线</button>
+		<button type="button" id="btn5">显示节点标题</button>
+		<button type="button" id="btn6">隐藏节点标题</button>
+		<button type="button" id="btn7">调用信息</button>
+		<button type="button" id="btn8">获取节点</button>
+		<button type="button" id="btn9">获取连线</button>
+	</div>
+	<div id="dataDiv"></div>
+</body>
+</html>

@@ -1,0 +1,16 @@
+/*---------------- tool ----------------*/
+div.tool > b.ico_move{background-image:url(./icons/tool-move.svg);}
+div.tool > b.ico_direct{background-image:url(./icons/tool-direct.svg);}
+div.tool > b.ico_start{background-image:url(./icons/tool-start.svg);}
+div.tool > b.ico_end{background-image:url(./icons/tool-end.svg);}
+div.tool > b.ico_search{background-image:url(./icons/tool-search.svg);}
+div.tool > b.ico_time{background-image:url(./icons/tool-time.svg);}
+div.tool > b.ico_offer{background-image:url(./icons/tool-offer.svg);}
+div.tool > b.ico_setting{background-image:url(./icons/tool-setting.svg);}
+div.tool > b.ico_sms{background-image:url(./icons/tool-sms.svg);}
+div.tool > b.ico_wechat{background-image:url(./icons/tool-wechat.svg);}
+div.tool > b.ico_phone{background-image:url(./icons/tool-phone.svg);}
+div.tool > b.ico_edm{background-image:url(./icons/tool-edm.svg);}
+div.tool > b.ico_split{background-image:url(./icons/tool-split.svg);}
+div.tool > b.ico_merge{background-image:url(./icons/tool-merge.svg);}
+div.tool > b.ico_block{background-image:url(./icons/tool-block.svg);}
