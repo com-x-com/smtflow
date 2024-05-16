@@ -93,19 +93,19 @@ let smt = $$('#flow').flow({
         console.info('onClickSave')
         //TODO
     },
-    // 删除节点时触发； 参数 当前节点id，当前节点类型
-    onRemoveNode: function(id, type) {
+    // 删除节点时触发； 参数 当前节点id，当前节点类型,标题,节点值
+    onRemoveNode: function(id, type, title, value) {
         console.info('onRemoveNode')
         //TODO
         //return false; 返回false 不删除节点
     },
-    // 节点鼠标右键时点击设置触发； 参数 当前节点id，当前节点类型
-    onSettingNode: function(id, type) {
+    // 节点鼠标右键时点击设置触发； 参数 当前节点id，当前节点类型,标题,节点值
+    onSettingNode: function(id, type, title, value) {
         console.info('onSettingNode')
         //TODO
     },
-    // 双击节点时触发； 参数 当前节点id，当前节点类型
-    onDblclick: function(id, type) {
+    // 双击节点时触发； 参数 当前节点id，当前节点类型,标题,节点值
+    onDblclick: function(id, type, title, value) {
         console.info('onDblclick')
         //TODO
     },
@@ -153,6 +153,10 @@ let node = smt.flow('getNode', 'NL4C63325');
 
 // 根据id获取连线
 let node = smt.flow('getLine', 'LL4C6TX3Z');
+
+// 根据id设置节点Value
+smt.flow('setNodeValue', 'NL4C63325', {name: '张三', age: 18});
+
 ```
 
 ## 按钮事件
@@ -273,9 +277,9 @@ onRemoveNode: function(id, type) {
 |onClickNew|none|none|点击新增时触发|
 |onClickOpen|none|none|点击打开时触发|
 |onClickSave|data|当前流程图Json数据|点击保存时触发|
-|onRemoveNode|id, type|当前节点id，当前节点类型|删除节点时触发|
-|onSettingNode|id, type|当前节点id，当前节点类型|节点鼠标右键时点击设置触发|
-|onDblclick|id, type|当前节点id，当前节点类型|双击节点时触发|
+|onRemoveNode|id, type, title, value|当前节点id，当前节点类型,标题,节点值|删除节点时触发|
+|onSettingNode|id, type, title, value|当前节点id，当前节点类型,标题,节点值|节点鼠标右键时点击设置触发|
+|onDblclick|id, type, title, value|当前节点id，当前节点类型,标题,节点值|双击节点时触发|
 |onAddNode|type|当前节点类型|新增节点时触发|
 |onAddLine|from, to|开始节点对象（id，type），结束节点对象（id，type）|增加连线时触发|
 |onLoadSuccess|none|none|流程图加载完成时触发|
@@ -292,6 +296,7 @@ onRemoveNode: function(id, type) {
 |loadData|map|导入流程图数据|smt.flow('loadData', data);|
 |getNode|string|根据id获取节点|let node = smt.flow('getNode', 'NL4C63325');|
 |getLine|string|根据id获取连线|let node = smt.flow('getLine', 'LL4C6TX3Z');|
+|setNodeValue|(string,object)|根据节点id设置节点Value|smt.flow('setNodeValue', 'NL4C63325', {name: '张三', age: 18});|
 
 ## 结构数据说明
 ### 格式
@@ -308,13 +313,15 @@ onRemoveNode: function(id, type) {
             "title": "开始",
             "x": 230.5,
             "y": 180.5,
-            "type": "start"
+            "type": "start",
+            "value": null
         }, {
             "id": "NL4C6TWC6",
             "title": "结束",
             "x": 453.5,
             "y": 181.5,
-            "type": "end"
+            "type": "end",
+            "value": {}
         }
     ],
     "lines": [{
@@ -350,6 +357,7 @@ onRemoveNode: function(id, type) {
 |               |x||横坐标|
 |               |y||纵坐标|
 |               |type||节点类型|
+|               |value||节点值|
 | lines         |||连线数组|
 |               |id||连线id|
 |               |type||连线类型|
