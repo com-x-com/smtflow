@@ -1,7 +1,7 @@
 # Smtflow
 
 ## 介绍
-Smt(Smart)flow 一款纯JS的WEB前端流程图设计工具，支持拖拽设计，丰富的API，良好的用户体验。
+Smt(Smart)flow 一款纯JS的轻量级WEB前端流程图设计工具，支持拖拽设计，丰富的API，良好的用户体验。
 
 ## 界面效果
 ![预览图](https://gitee.com/com-x-com/smtflow/raw/master/smtflow.png)
@@ -25,6 +25,7 @@ Smt(Smart)flow 一款纯JS的WEB前端流程图设计工具，支持拖拽设计
 -  仿JQuery EasyUI风格
 -  支持主流浏览器 IE9 +，Edge，Chrome，Firefox，Opera，Safari 等
 -  通俗配置，丰富的API
+-  自定义图标，国际化语言
 -  更多惊喜，等你发现
 
 ## 使用方法
@@ -252,8 +253,16 @@ onRemoveNode: function(id, type) {
 ![节点菜单](https://images.gitee.com/uploads/images/2022/0114/154933_4e870786_10219732.png "节点菜单")
 
 
-### 选择连线时唤醒连线工具，可删除和修改连线类型
-![连线工具](https://images.gitee.com/uploads/images/2022/0114/155221_dea99c95_10219732.png "连线工具")
+### 选择连线时唤醒连线工具，可删除/修改连线类型 并可设置连线标题
+![连线工具](https://foruda.gitee.com/images/1727343169841676612/264ad99c_10219732.png "连线工具")
+
+
+### 双击节点标题可修改
+![节点修改标题](https://images.gitee.com/uploads/images/2022/0117/154019_c92df151_10219732.png "节点修改标题")
+
+
+### 双击流程图标题可修改
+![修改标题](https://images.gitee.com/uploads/images/2022/0117/153841_d9865ad5_10219732.png "修改标题")
 
 
 ## 属性
@@ -327,6 +336,7 @@ onRemoveNode: function(id, type) {
     "lines": [{
             "id": "LL4C6TX3Z",
             "type": "polyline",
+            "title": "下一步",
             "from": {
                 "id": "NL4C63325",
                 "dot": "r",
@@ -361,6 +371,7 @@ onRemoveNode: function(id, type) {
 | lines         |||连线数组|
 |               |id||连线id|
 |               |type||连线类型|
+|               |title||连线标题|
 |               |from||开始节点|
 |               ||id|开始节点id|
 |               ||dot|开始节点方位点|
